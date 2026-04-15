@@ -1,0 +1,22 @@
+{
+  "events": [
+    {
+      "type": "HTTP_STREAM_JOB",
+      "params": {
+        "response_code": 401,
+        "headers": {
+          "WWW-Authenticate": "Negotiate"
+        }
+      }
+    },
+    {
+      "type": "HTTP_STREAM_JOB",
+      "params": {
+        "response_code": 401,
+        "headers": {
+          "WWW-Authenticate": "NTLM"
+        }
+      }
+    }
+  ]
+}

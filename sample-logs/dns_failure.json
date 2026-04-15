@@ -1,0 +1,34 @@
+{
+  "events": [
+    {
+      "type": "HOST_RESOLVER_IMPL_JOB",
+      "phase": "PHASE_BEGIN",
+      "params": {
+        "host": "example.com"
+      }
+    },
+    {
+      "type": "HOST_RESOLVER_IMPL_JOB",
+      "phase": "PHASE_END",
+      "params": {
+        "host": "example.com",
+        "net_error": -105
+      }
+    },
+    {
+      "type": "HOST_RESOLVER_IMPL_JOB",
+      "phase": "PHASE_BEGIN",
+      "params": {
+        "host": "example.com"
+      }
+    },
+    {
+      "type": "HOST_RESOLVER_IMPL_JOB",
+      "phase": "PHASE_END",
+      "params": {
+        "host": "example.com",
+        "net_error": -105
+      }
+    }
+  ]
+}

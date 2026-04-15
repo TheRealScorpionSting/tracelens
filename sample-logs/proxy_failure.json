@@ -1,0 +1,11 @@
+{
+  "events": [
+    {
+      "type": "HTTP_STREAM_JOB",
+      "phase": "PHASE_END",
+      "params": {
+        "net_error": -111
+      }
+    }
+  ]
+}

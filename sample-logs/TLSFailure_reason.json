@@ -1,0 +1,109 @@
+{
+  "constants": {
+    "logEventTypes": {
+      "HOST_RESOLVER_IMPL_JOB": 100,
+      "TCP_CONNECT": 101,
+      "SSL_CONNECT_JOB": 102,
+      "URL_REQUEST": 103
+    }
+  },
+  "events": [
+    {
+      "time": "1000",
+      "type": "HOST_RESOLVER_IMPL_JOB",
+      "phase": "PHASE_BEGIN",
+      "source": {
+        "id": 1,
+        "type": "HOST_RESOLVER_IMPL_JOB"
+      },
+      "params": {
+        "host": "example.com"
+      }
+    },
+    {
+      "time": "1010",
+      "type": "HOST_RESOLVER_IMPL_JOB",
+      "phase": "PHASE_END",
+      "source": {
+        "id": 1,
+        "type": "HOST_RESOLVER_IMPL_JOB"
+      },
+      "params": {
+        "address_list": ["93.184.216.34"]
+      }
+    },
+    {
+      "time": "1020",
+      "type": "TCP_CONNECT",
+      "phase": "PHASE_BEGIN",
+      "source": {
+        "id": 2,
+        "type": "SOCKET"
+      },
+      "params": {
+        "address": "93.184.216.34:443"
+      }
+    },
+    {
+      "time": "1030",
+      "type": "TCP_CONNECT",
+      "phase": "PHASE_END",
+      "source": {
+        "id": 2,
+        "type": "SOCKET"
+      },
+      "params": {
+        "net_error": 0
+      }
+    },
+    {
+      "time": "1040",
+      "type": "SSL_CONNECT_JOB",
+      "phase": "PHASE_BEGIN",
+      "source": {
+        "id": 2,
+        "type": "SOCKET"
+      },
+      "params": {
+        "host_and_port": "example.com:443"
+      }
+    },
+    {
+      "time": "1050",
+      "type": "SSL_CONNECT_JOB",
+      "phase": "PHASE_END",
+      "source": {
+        "id": 2,
+        "type": "SOCKET"
+      },
+      "params": {
+        "net_error": "ERR_CERT_AUTHORITY_INVALID",
+        "cert_status": "CERT_STATUS_AUTHORITY_INVALID"
+      }
+    },
+    {
+      "time": "1060",
+      "type": "URL_REQUEST",
+      "phase": "PHASE_BEGIN",
+      "source": {
+        "id": 3,
+        "type": "URL_REQUEST"
+      },
+      "params": {
+        "url": "https://example.com/"
+      }
+    },
+    {
+      "time": "1070",
+      "type": "URL_REQUEST",
+      "phase": "PHASE_END",
+      "source": {
+        "id": 3,
+        "type": "URL_REQUEST"
+      },
+      "params": {
+        "net_error": "ERR_CERT_AUTHORITY_INVALID"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "events": [
+    {
+      "type": "HTTP_TRANSACTION_READ_HEADERS",
+      "params": {
+        "response_code": 401,
+        "headers": [
+          "WWW-Authenticate: NTLM"
+        ]
+      }
+    },
+    {
+      "type": "HTTP_TRANSACTION_READ_HEADERS",
+      "params": {
+        "response_code": 401,
+        "headers": [
+          "WWW-Authenticate: NTLM"
+        ]
+      }
+    }
+  ]
+}

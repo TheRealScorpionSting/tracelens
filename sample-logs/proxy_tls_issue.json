@@ -1,0 +1,18 @@
+{
+  "events": [
+    {
+      "type": "HTTP_STREAM_JOB",
+      "phase": "PHASE_END",
+      "params": {
+        "net_error": -111
+      }
+    },
+    {
+      "type": "SSL_CONNECT_JOB",
+      "phase": "PHASE_END",
+      "params": {
+        "net_error": -202
+      }
+    }
+  ]
+}
